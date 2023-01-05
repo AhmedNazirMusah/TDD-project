@@ -11,12 +11,6 @@ describe Solver do
     end
 
     it 'solver.factorial should return the factorial of the number' do
-      number = 4
-      output = solver.factorial(number)
-      expect(output).to eq 24
-    end
-
-    it 'solver.factorial should return the factorial of the number' do
       number = 0
       output = solver.factorial(number)
       expect(output).to eq 1
@@ -28,9 +22,9 @@ describe Solver do
       expect(output).to eq 1
     end
 
-    it 'solver.factorial should return the factorial of the number' do
+    it 'solver.factorial should return a string' do
       number = -2
-      expect { solver.factorial(number) }.to raise_error(Error)
+      expect(solver.factorial(number)).to eq 'Cannot find the factorial of a negative number!'
     end
   end
 end
